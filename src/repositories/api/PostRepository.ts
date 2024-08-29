@@ -1,6 +1,5 @@
-// src/repositories/UserRepository.ts
 import ky from "ky";
-import { Post, CreatePostRequest } from "../models/Post";
+import { Post, CreatePostRequest } from "../../models/Post";
 
 const api = ky.create({
   prefixUrl: "https://jsonplaceholder.typicode.com/posts/1",

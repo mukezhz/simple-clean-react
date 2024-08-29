@@ -8,7 +8,7 @@ const queryClient = new QueryClient()
 
 const App: React.FC = () => (
   <ErrorBoundary>
-    <Suspense fallback={<div>Loading users...</div>}>
+    <Suspense fallback={<div>Loading...</div>}>
       <QueryClientProvider client={queryClient}>
         <CreatePost />
         <PostListWrapper />

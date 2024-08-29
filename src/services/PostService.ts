@@ -1,4 +1,4 @@
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient, useSuspenseQuery } from "@tanstack/react-query";
 import {
   fetchPosts,
   fetchPostById,
@@ -7,10 +7,9 @@ import {
 import { Post, CreatePostRequest } from "../models/Post";
 
 export const usePosts = () => {
-  return useQuery<Post[], Error>({
-    queryKey: ["users"],
+  return useSuspenseQuery<Post[], Error>({
+    queryKey: ["posts"],
     queryFn: fetchPosts,
-    initialData: [],
   });
 };
 
