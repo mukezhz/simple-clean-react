@@ -3,7 +3,7 @@ import {
   fetchPosts,
   fetchPostById,
   createPost,
-} from "../repositories/PostRepository";
+} from "../repositories/api/PostRepository";
 import { Post, CreatePostRequest } from "../models/Post";
 
 export const usePosts = () => {
